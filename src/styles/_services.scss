@@ -1,0 +1,56 @@
+.services {
+  background: $bg-muddy;
+
+  &__item {
+    display: flex;
+    border-radius: 9px;
+    background: $light;
+    padding: 10px 29px 27px 12px;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+    @include media-breakpoint-up(lg) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    background: $purple;
+    background: $purple-gradient;
+    border-radius: 100px;
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 17px 0 0 17px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 147%;
+    color: $dark;
+    margin: 17px 0 0 17px;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+    @include media-breakpoint-up(lg) {
+      text-align: center;
+    }
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+  }
+}

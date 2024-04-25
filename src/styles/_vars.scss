@@ -1,0 +1,20 @@
+$purple: #3f0f72;
+$lilac: #791281;
+$light: white;
+$dark: #333;
+$muddy: #777;
+$bg-muddy: #f6f4f9;
+$bg-muddy-light: #7e779a;
+
+$nav-height: 56px;
+$font-family: "TT Commons", sans-serif;
+$second-family: "Pragmatica", sans-serif;
+$purple-gradient: linear-gradient(147deg, $purple 0%, $lilac 100%);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1194px,
+);

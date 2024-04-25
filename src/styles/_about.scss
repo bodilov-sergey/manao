@@ -1,0 +1,21 @@
+.about {
+  &__subtitle {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 20px;
+    color: $dark;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__img {
+    height: 100%;
+    padding-top: 35%;
+    background: url(/assets/images/about/about3.jpg) 50% 50% / cover no-repeat;
+  }
+}

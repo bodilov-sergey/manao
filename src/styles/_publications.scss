@@ -1,0 +1,49 @@
+.publications {
+  overflow: hidden;
+
+  &__swiper {
+    position: relative;
+    margin: 0 -12px;
+    @include media-breakpoint-up(sm) {
+      margin: 0;
+    }
+  }
+
+  &__swiper-button {
+    width: 49px;
+    height: 49px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background: $light;
+    & svg {
+      stroke: #d3d0d6;
+      transition: stroke 0.25s ease;
+    }
+    &:hover svg {
+      stroke: #791281;
+    }
+  }
+
+  &__swiper-button--prev {
+    left: calc(24px + 11vw - 24px);
+    transform: translate(-50%, -50%);
+    @include media-breakpoint-up(sm) {
+      left: 0;
+    }
+  }
+
+  &__swiper-button--next {
+    right: calc(24px + 11vw - 24px);
+    transform: translate(50%, -50%);
+    @include media-breakpoint-up(sm) {
+      right: 0;
+    }
+  }
+}

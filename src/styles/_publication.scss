@@ -1,0 +1,77 @@
+.publication {
+  background: $bg-muddy;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    flex-grow: 1;
+    padding: 27px 27px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 109%;
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: $dark;
+    transition: color 0.25s ease;
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &__description {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: $muddy;
+    padding-bottom: 26px;
+    border-bottom: 2px solid #eae8ec;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 18px;
+  }
+
+  &__data {
+    color: #c4c4c4;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      margin-right: 7px;
+      width: 16px;
+      height: 20px;
+      display: inline-block;
+      background: url(/assets/images/publications/calendar.svg) 0 0 no-repeat;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+html {
+  scroll-padding-top: $nav-height;
+  body {
+    font-family: $font-family;
+  }
+}
+.section {
+  padding: 115px 0;
+}
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 83%;
+  color: $dark;
+}
+.subtitle {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: $muddy;
+}
+.purple-gradient {
+  background: $purple-gradient;
+}

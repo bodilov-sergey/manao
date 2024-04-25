@@ -1,0 +1,139 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: $second-family;
+
+  &__control-label {
+    position: relative;
+  }
+
+  &__control {
+    outline: none;
+    width: 100%;
+    padding: 12px 21px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $light;
+    background: none;
+    border: 2px solid #473e69;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 28px;
+    transition: border-color 0.25s ease;
+    &:hover {
+      border-color: $bg-muddy-light;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px #483e6ad3;
+    }
+  }
+  &__control-text {
+    font-weight: 300;
+    font-size: 16px;
+    color: $bg-muddy-light;
+    position: absolute;
+    top: 14px;
+    left: 23px;
+    transition: all 0.25s ease;
+  }
+
+  &__control.filled ~ &__control-text,
+  &__control:focus ~ &__control-text {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+
+  &__control-error {
+    font-weight: 300;
+    font-size: 12px;
+    color: $light;
+    position: absolute;
+    left: 6px;
+    bottom: 29px;
+    display: none;
+  }
+
+  &__control.error ~ * ~ &__control-error {
+    display: inline;
+  }
+
+  &__checkbox-label {
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 19px;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox-style {
+    flex-shrink: 0;
+    border-radius: 4px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 14px;
+    border: 2px solid #473e69;
+    transition: border-color 0.25s ease;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 9px;
+      height: 5.5px;
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      left: 8px;
+      bottom: 5px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+  }
+
+  &__checkbox-label:hover &__checkbox-style {
+    border-color: $bg-muddy-light;
+  }
+
+  &__checkbox:checked ~ &__checkbox-style::before {
+    opacity: 1;
+  }
+
+  &__checkbox-text {
+    font-weight: 300;
+    font-size: 15px;
+    color: $light;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+    align-items: center;
+  }
+
+  &__bottom-item {
+    margin: 20px 0 0 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    color: $bg-muddy-light;
+  }
+
+  &__link {
+    color: $bg-muddy-light;
+    transition: color 0.25s ease;
+    &:hover {
+      color: $light;
+    }
+  }
+}
